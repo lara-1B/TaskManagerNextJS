@@ -1,6 +1,7 @@
 const Task = require('../models/Task');
 const User = require('../models/User');
 const Notification = require('../models/Notification');
+const AuditLog = require('../models/AuditLog'); // Import the AuditLog model
 
 // Helper to check task ownership or admin role
 const checkOwnershipOrAdmin = (task, userId, userRole) => {
@@ -29,6 +30,13 @@ const createTask = async (req, res) => {
     });
 
     await task.save();
+
+    // Create an audit log entry for task creation
+    await AuditLog.create({
+      userId: req.user.id,
+      taskId: task._id,
+      action: 'create',
+    });
 
     // Send notification to the assigned user if they are not the creator
     if (assignedTo && assignedTo !== req.user.id) {

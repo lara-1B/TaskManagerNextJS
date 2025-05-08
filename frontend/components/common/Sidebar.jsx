@@ -67,7 +67,7 @@ export default function Sidebar() {
                     <Link href="/schedule">
                         <motion.li className="flex items-center space-x-2 cursor-pointer p-1 rounded-md group hover:bg-gradient-to-r hover:from-blue-100 hover:via-blue-50 hover:to-blue-100">
                             <IoMdCalendar className="text-xl md:text-base pt-2 md:pt-0" /> {/* Add padding-top */}
-                            <IoMdCalendar className="text-xl md:text-base" /> {/* Adjust icon size */}
+                           
                             <span className="hidden md:inline">Schedule</span>
                         </motion.li>
                     </Link>

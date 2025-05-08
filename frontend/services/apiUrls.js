@@ -2,7 +2,7 @@
 // const host = 'localhost:5000'; // Ensure this matches your backend server's host and port
 // const base = `${scheme}://${host}/api`;
 
-const base = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api`;
+const base = `${process.env.NEXT_PUBLIC_API_BASE}/api`;
 
 export const login = `${base}/users/login`;                 
 export const register = `${base}/users/register`;           
@@ -24,4 +24,4 @@ export const getTaskCompletionStats = `${base}/analytics/task-completion`;
 export const getOverdueTasks = `${base}/analytics/overdue-tasks`; 
 export const getCompletedTasksPerUser = `${base}/analytics/completed-tasks-per-user`; 
 export const assignTask = (id) => `${base}/tasks/assign/${id}`;
-export const markTaskComplete = (id) => `${base}/tasks/${id}/complete`; 
+export const markTaskComplete = (id) => `${base}/tasks/${id}/complete`;
