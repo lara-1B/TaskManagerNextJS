@@ -17,7 +17,7 @@ export default function Login() {
         <div className="hidden md:flex flex-col justify-center items-center w-1/2 bg-gradient-to-r from-orange-400 to-orange-500 text-white p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Welcome Back!</h2>
           <p className="text-sm mb-6">
-            Don't have an account? Register now to start managing your tasks efficiently.
+             missing account? Register now to start managing your tasks efficiently.
           </p>
           <Link
             href="/register"
